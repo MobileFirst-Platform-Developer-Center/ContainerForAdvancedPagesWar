@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="libs/ibm_web20_jsr311-api.jar"/>
+	<classpathentry kind="lib" path="libs/ibm_web20_wink.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-asl.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-mapper-asl.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-xc.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-jaxrs.jar"/>
+	<classpathentry kind="lib" path="libs/javax-servlet-api.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="module_45_1_IntegrateExistingWebContentWar">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/module_45_1_IntegrateExistingWebContentWar/target/classes"/>
+        <property name="context-root" value="conference"/>
+    </wb-module>
+</project-modules>
