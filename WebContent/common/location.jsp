@@ -1,15 +1,17 @@
 <%--
-    COPYRIGHT LICENSE: This information contains sample code provided in source code form. You may copy, modify, and distribute
-    these sample programs in any form without payment to IBM® for the purposes of developing, using, marketing or distributing
-    application programs conforming to the application programming interface for the operating platform for which the sample code is written.
-    Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE ON AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES,
-    EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, SATISFACTORY QUALITY,
-    FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT,
-    INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE.
-    IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+Copyright 2015 IBM Corp.
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
+http://www.apache.org/licenses/LICENSE-2.0
 
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 --%>
 <!DOCTYPE html>
 
@@ -78,7 +80,7 @@
 			</c:forEach>
 		</ul>
 	</div>
-	
+
 	<div id="conferences" dojoType="dojox.mobile.ScrollableView">
 		<h1 dojoType="dojox.mobile.Heading" back="Locations" moveTo="locations" transition="slide" fixed="top">
 		 Conferences</h1>
@@ -100,7 +102,7 @@
 		<ul id="pList" dojoType="dojox.mobile.RoundRectList">
 		</ul>
 	</div>
-	
+
 	<h1 id="footbar" data-dojo-type="dojox.mobile.Heading" fixed="bottom">
 		<div id="uploadButton"
 			style="position: relative; float: right; visibility: hidden;">
@@ -108,7 +110,7 @@
 				data-dojo-props='label:"Save Photo to gallery", onClick:
 					function(e){
 					  camera.photo.savePhoto();
-			          return true; 
+			          return true;
 			        }'></div>
 		</div>
 		<div style="position: relative; float: left;">
@@ -116,7 +118,7 @@
 				<span data-dojo-type="dojox.mobile.ToolBarButton"
 					data-dojo-props='onClick:function(){
 			                                  document.forms["logout"].submit();
-		                                        
+
                          },
                          transition:"slide"'>Logout</span>
 				<input type="hidden" name="logoutExitPage" value="/">
@@ -127,8 +129,8 @@
 
 <c:choose>
 	<c:when test="${fn:contains(iOSClient, 'Android')}">
-	
-	
+
+
 	<script>
 		// Define WL namespace.
 		var WL = WL ? WL : {};
@@ -153,13 +155,13 @@
 		<script src="../mfp_android/ibm/worklight.js"></script>
 		<script src="../mfp_android/ibm/checksum.js"></script>
 		<script>window.$ = window.jQuery = WLJQ;</script>
-	
-	
-	
-	
+
+
+
+
 	</c:when>
 	<c:otherwise>
-	
+
 	 <script>
 		// Define WL namespace.
 		var WL = WL ? WL : {};
@@ -184,9 +186,9 @@
 		<script src="../mfp_ios/ibm/worklight.js"></script>
 		<script src="../mfp_ios/ibm/checksum.js"></script>
 		<script>window.$ = window.jQuery = WLJQ;</script>
-		
 
-	</c:otherwise>	
+
+	</c:otherwise>
 </c:choose>
 
 <script type="text/javascript" src="dojo/dojo.js"
@@ -205,15 +207,15 @@
 				function success(){
 					console.info('WL init success...');
 				}
-				
+
 				function failure(){
 					console.info('WL init failure...');
 				}
-		
+
 				ready(function(){
 					parser.parse();
 					photo.init();
-					
+
 					var presentersView = registry.byId("presenters");
 					dojo.connect(presentersView, "onBeforeTransitionIn", null,
 							function(moveto, dir, transition, context,
@@ -228,7 +230,7 @@
 										"hidden");
 							});
 				});
-					
+
 	});
 </script>
 
